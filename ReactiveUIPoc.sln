@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUIPoc", "ReactiveUIPoc.csproj", "{20109EC6-F0B6-4F05-BE91-CDFB74AF3D8A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7F400ED4-BA9B-49DA-A10D-EB8E0C51A7DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{A5A91C9B-DCDA-4C4B-9C41-4DC081B16B54}"
@@ -12,10 +10,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20109EC6-F0B6-4F05-BE91-CDFB74AF3D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20109EC6-F0B6-4F05-BE91-CDFB74AF3D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20109EC6-F0B6-4F05-BE91-CDFB74AF3D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20109EC6-F0B6-4F05-BE91-CDFB74AF3D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F400ED4-BA9B-49DA-A10D-EB8E0C51A7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F400ED4-BA9B-49DA-A10D-EB8E0C51A7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F400ED4-BA9B-49DA-A10D-EB8E0C51A7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
