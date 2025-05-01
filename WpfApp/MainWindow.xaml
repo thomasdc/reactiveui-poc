@@ -9,6 +9,9 @@
                            mc:Ignorable="d"
                            Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox Name="TheBox"></TextBox>
+        <StackPanel>
+            <TextBox Name="TheBox"></TextBox>
+            <Button Name="TheButton" Content="Run Job"></Button>    
+        </StackPanel>
     </Grid>
 </reactiveui:ReactiveWindow>

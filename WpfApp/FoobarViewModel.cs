@@ -32,19 +32,20 @@ public class FoobarViewModel : ReactiveObject
         
         // https://www.reactiveui.net/docs/handbook/commands/#controlling-executability
         var canExecuteJob = this.WhenAnyValue(_ => _.Time)
-            .Select(time => time.Second % 3 == 0);
+            .Select(time => time.Second % 3 == 0)
+            .ObserveOn(RxApp.MainThreadScheduler);
         canExecuteJob.DistinctUntilChanged()
             .Subscribe(allowed => Console.WriteLine("Can execute job: " + allowed));
         RunJob = ReactiveCommand.CreateFromTask<string>(Run, canExecuteJob);
 
-        this.WhenAnyValue(_ => _.TimeAsString)
-            .InvokeCommand(RunJob);
+        //this.WhenAnyValue(_ => _.TimeAsString)
+        //    .InvokeCommand(RunJob);
     }
 
     public async Task Run(string timeAsString)
     {
         Console.WriteLine($"Running!\t{timeAsString}");
-        await Task.Delay(100);
+        await Task.Delay(1000);
         Console.WriteLine($"Ended\t\t{timeAsString}");
     }
 }

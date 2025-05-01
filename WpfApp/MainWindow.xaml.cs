@@ -29,6 +29,11 @@ public partial class MainWindow
                     viewModel => viewModel.TimeAsString,
                     view => view.TheBox.Text)
                 .DisposeWith(disposables);
+
+            this.BindCommand(ViewModel,
+                viewModel => viewModel.RunJob,
+                view => view.TheButton)
+                .DisposeWith(disposables);
         });
     }
 }
