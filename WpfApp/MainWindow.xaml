@@ -1,13 +1,11 @@
-﻿<reactiveui:ReactiveWindow x:Class="ReactiveUIPoc.MainWindow"
+﻿<reactiveui:ReactiveWindow x:Class="WpfApp.MainWindow"
                            x:TypeArguments="local:FoobarViewModel"
                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                           xmlns:local="clr-namespace:ReactiveUIPoc"
+                           xmlns:local="clr-namespace:WpfApp"
                            xmlns:reactiveui="http://reactiveui.net"
-                           xmlns:consoleApp="clr-namespace:ConsoleApp;assembly=ConsoleApp"
-                           xmlns:bla="clr-namespace:ConsoleApp.Bla;assembly=ConsoleApp"
                            mc:Ignorable="d"
                            Title="MainWindow" Height="450" Width="800">
     <Grid>

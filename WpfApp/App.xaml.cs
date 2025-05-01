@@ -5,7 +5,7 @@ using System.Windows;
 using ReactiveUI;
 using Splat;
 
-namespace ReactiveUIPoc;
+namespace WpfApp;
 
 /// <summary>
 /// Interaction logic for App.xaml
