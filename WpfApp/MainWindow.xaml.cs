@@ -32,7 +32,8 @@ public partial class MainWindow
 
             this.BindCommand(ViewModel,
                 viewModel => viewModel.RunJob,
-                view => view.TheButton)
+                view => view.TheButton,
+                viewModel => viewModel.TimeAsString)
                 .DisposeWith(disposables);
         });
     }
