@@ -1,4 +1,5 @@
 ﻿using System.Reactive.Disposables;
+using System.Reactive.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,6 +35,12 @@ public partial class MainWindow
                 viewModel => viewModel.RunJob,
                 view => view.TheButton,
                 viewModel => viewModel.TimeAsString)
+                .DisposeWith(disposables);
+            
+            this.WhenAnyObservable(view => view.ViewModel!.RunJob.IsExecuting)
+                .Select(isExecuting => isExecuting ? Visibility.Visible : Visibility.Hidden)
+                .ObserveOn(RxApp.MainThreadScheduler)
+                .BindTo(this, view => view.TheProgressBar.Visibility)
                 .DisposeWith(disposables);
         });
     }

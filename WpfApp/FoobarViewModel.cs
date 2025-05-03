@@ -37,7 +37,7 @@ public class FoobarViewModel : ReactiveObject
         canExecuteJob.DistinctUntilChanged()
             .Subscribe(allowed => Console.WriteLine("Can execute job: " + allowed));
         RunJob = ReactiveCommand.CreateFromTask<string>(Run, canExecuteJob);
-
+        
         //this.WhenAnyValue(_ => _.TimeAsString)
         //    .InvokeCommand(RunJob);
     }
@@ -45,7 +45,7 @@ public class FoobarViewModel : ReactiveObject
     public async Task Run(string timeAsString)
     {
         Console.WriteLine($"Running!\t{timeAsString}");
-        await Task.Delay(1000);
+        await Task.Delay(3000);
         Console.WriteLine($"Ended\t\t{timeAsString}");
     }
 }
