@@ -12,6 +12,7 @@
         <StackPanel>
             <TextBox Name="TheBox"></TextBox>
             <Button Name="TheButton" Content="Run Job"></Button>
+            <TextBox Name="TheBoxCanExecute"></TextBox>
             <ProgressBar Name="TheProgressBar" IsIndeterminate="True" Height="5"></ProgressBar>
         </StackPanel>
     </Grid>

@@ -37,9 +37,12 @@ public partial class MainWindow
                 viewModel => viewModel.TimeAsString)
                 .DisposeWith(disposables);
             
+            this.WhenAnyObservable(view => view.ViewModel!.RunJob.CanExecute)
+                .BindTo(this, view => view.TheBoxCanExecute.Text)
+                .DisposeWith(disposables);
+            
             this.WhenAnyObservable(view => view.ViewModel!.RunJob.IsExecuting)
                 .Select(isExecuting => isExecuting ? Visibility.Visible : Visibility.Hidden)
-                .ObserveOn(RxApp.MainThreadScheduler)
                 .BindTo(this, view => view.TheProgressBar.Visibility)
                 .DisposeWith(disposables);
         });
