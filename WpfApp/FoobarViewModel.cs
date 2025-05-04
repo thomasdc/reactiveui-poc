@@ -16,6 +16,13 @@ public class FoobarViewModel : ReactiveObject
     private readonly ObservableAsPropertyHelper<string> _timeAsString;
     public string TimeAsString => _timeAsString.Value;
     
+    private string _someText;
+    public string SomeText
+    {
+        get => _someText;
+        private set => this.RaiseAndSetIfChanged(ref _someText, value);
+    }
+    
     public ReactiveCommand<string, Unit> RunJob { get; }
     
     public FoobarViewModel()

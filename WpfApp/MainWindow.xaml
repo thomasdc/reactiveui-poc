@@ -10,10 +10,8 @@
                            Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <TextBox Name="TheBox"></TextBox>
-            <Button Name="TheButton" Content="Run Job"></Button>
-            <TextBox Name="TheBoxCanExecute"></TextBox>
-            <ProgressBar Name="TheProgressBar" IsIndeterminate="True" Height="5"></ProgressBar>
+            <local:UserControl1 x:Name="Control1"></local:UserControl1>
+            <local:UserControl2 x:Name="Control2"></local:UserControl2>
         </StackPanel>
     </Grid>
 </reactiveui:ReactiveWindow>
