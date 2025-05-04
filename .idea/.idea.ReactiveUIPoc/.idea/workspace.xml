@@ -10,25 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d2ff40d-5438-4f54-82c2-b4569a32826f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ReactiveUIPoc/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.reactiveui-poc/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactiveui-poc.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReactiveUIPoc/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.reactiveui-poc/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReactiveUIPoc/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.reactiveui-poc/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReactiveUIPoc/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.reactiveui-poc/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReactiveUIPoc/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.reactiveui-poc/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/ConsoleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/ConsoleViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveUIPoc.sln" beforeDir="false" afterPath="$PROJECT_DIR$/reactiveui-poc.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/FoobarViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/FoobarViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/UserControl1.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/UserControl1.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/UserControl1.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/UserControl1.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/UserControl2.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/UserControl2.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/UserControl2.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/UserControl2.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WpfApp/WpfApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/WpfApp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +156,7 @@
       <workItem from="1746258490134" duration="3044000" />
       <workItem from="1746302013128" duration="684000" />
       <workItem from="1746347769094" duration="259000" />
-      <workItem from="1746369127630" duration="3999000" />
+      <workItem from="1746369127630" duration="4291000" />
     </task>
     <servers />
   </component>
