@@ -2,7 +2,7 @@
 using System.Reactive.Linq;
 using ReactiveUI;
 
-namespace WpfApp;
+namespace Wpf;
 
 public class FoobarViewModel : ReactiveObject
 {

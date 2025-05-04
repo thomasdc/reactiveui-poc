@@ -1,4 +1,4 @@
-﻿namespace WpfApp;
+﻿namespace Wpf;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

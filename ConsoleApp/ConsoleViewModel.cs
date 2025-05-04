@@ -2,7 +2,7 @@ using System.Reactive;
 using System.Reactive.Linq;
 using ReactiveUI;
 
-namespace ConsoleApp.Bla;
+namespace ConsoleApp;
 
 public class ConsoleViewModel : ReactiveObject
 {

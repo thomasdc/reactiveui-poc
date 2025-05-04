@@ -3,7 +3,7 @@ using System.Reactive.Linq;
 using System.Windows;
 using ReactiveUI;
 
-namespace WpfApp;
+namespace Wpf;
 
 public partial class UserControl1
 {
