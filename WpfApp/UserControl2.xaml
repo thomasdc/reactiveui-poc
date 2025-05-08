@@ -19,6 +19,7 @@
                      Margin="5"
                      VerticalContentAlignment="Center">
             </TextBox>
+            <Button Name="TheButton2" Content="Browse"></Button>
         </StackPanel>
     </Grid>
 </reactiveui:ReactiveUserControl>

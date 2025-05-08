@@ -24,7 +24,11 @@ public class FoobarViewModel : ReactiveObject
     }
     
     public ReactiveCommand<string, Unit> RunJob { get; }
+
+    public Interaction<Unit, string?> FolderSelection { get; }
     
+    public ReactiveCommand<Unit, Unit> BrowseFolder { get; }
+
     public FoobarViewModel()
     {
         Time = DateTimeOffset.Now;
@@ -45,14 +49,27 @@ public class FoobarViewModel : ReactiveObject
             .Subscribe(allowed => Console.WriteLine("Can execute job: " + allowed));
         RunJob = ReactiveCommand.CreateFromTask<string>(Run, canExecuteJob);
         
-        //this.WhenAnyValue(_ => _.TimeAsString)
-        //    .InvokeCommand(RunJob);
+        // https://www.reactiveui.net/docs/handbook/interactions/
+        FolderSelection = new Interaction<Unit, string?>();
+        BrowseFolder = ReactiveCommand.CreateFromTask(OnBrowseFolder);
     }
 
-    public async Task Run(string timeAsString)
+    private async Task Run(string timeAsString)
     {
         Console.WriteLine($"Running!\t{timeAsString}");
         await Task.Delay(3000);
         Console.WriteLine($"Ended\t\t{timeAsString}");
+    }
+
+    private async Task OnBrowseFolder()
+    {
+        Console.WriteLine("Hello from OnBrowseFolder");
+        var folder = await FolderSelection.Handle(Unit.Default);
+        if (folder != null)
+        {
+            SomeText = folder;
+        }
+        
+        Console.WriteLine("Bye from OnBrowseFolder");
     }
 }

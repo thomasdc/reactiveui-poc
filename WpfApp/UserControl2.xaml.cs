@@ -1,6 +1,7 @@
 ﻿using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Windows;
+using Microsoft.Win32;
 using ReactiveUI;
 
 namespace Wpf;
@@ -36,6 +37,24 @@ public partial class UserControl2
             this.Bind(ViewModel,
                     viewModel => viewModel.SomeText,
                     view => view.TheThirdBox.Text)
+                .DisposeWith(disposables);
+
+            ViewModel!.FolderSelection.RegisterHandler(interaction =>
+            {
+                var folderDialog = new OpenFolderDialog
+                {
+                    Title = "Select folder...",
+                };
+                
+                return Observable.Start(() =>
+                {
+                    interaction.SetOutput(folderDialog.ShowDialog() == true ? folderDialog.FolderName : null);
+                }, RxApp.MainThreadScheduler);
+            });
+            
+            this.BindCommand(ViewModel,
+                    viewModel => viewModel.BrowseFolder,
+                    view => view.TheButton2)
                 .DisposeWith(disposables);
         });
     }
