@@ -45,11 +45,8 @@ public partial class UserControl2
                 {
                     Title = "Select folder...",
                 };
-                
-                return Observable.Start(() =>
-                {
-                    interaction.SetOutput(folderDialog.ShowDialog() == true ? folderDialog.FolderName : null);
-                }, RxApp.MainThreadScheduler);
+
+                interaction.SetOutput(folderDialog.ShowDialog() == true ? folderDialog.FolderName : null);
             });
             
             this.BindCommand(ViewModel,
