@@ -54,6 +54,11 @@ public class FoobarViewModel : ReactiveObject
         // https://www.reactiveui.net/docs/handbook/interactions/
         FolderSelection = new Interaction<string?, string?>();
         BrowseFolder = ReactiveCommand.CreateFromTask(OnBrowseFolder);
+        
+        RunJob.Subscribe(_ =>
+        {
+            Console.WriteLine("From subscriber: run job finished");
+        });
     }
 
     private void Run(string timeAsString)
