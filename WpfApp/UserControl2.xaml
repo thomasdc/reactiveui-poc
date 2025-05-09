@@ -1,4 +1,4 @@
-﻿<reactiveui:ReactiveUserControl x:Class="Wpf.UserControl2"
+﻿<reactiveui:ReactiveUserControl x:Class="WpfApp.UserControl2"
                                 x:TypeArguments="local:FoobarViewModel"
                                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

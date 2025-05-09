@@ -6,12 +6,13 @@
                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                            xmlns:local="clr-namespace:Wpf"
                            xmlns:reactiveui="http://reactiveui.net"
+                           xmlns:wpfApp="clr-namespace:WpfApp"
                            mc:Ignorable="d"
                            Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
             <local:UserControl1 x:Name="Control1"></local:UserControl1>
-            <local:UserControl2 x:Name="Control2"></local:UserControl2>
+            <wpfApp:UserControl2 x:Name="Control2"></wpfApp:UserControl2>
         </StackPanel>
     </Grid>
 </reactiveui:ReactiveWindow>

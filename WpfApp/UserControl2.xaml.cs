@@ -4,7 +4,7 @@ using System.Windows;
 using Microsoft.Win32;
 using ReactiveUI;
 
-namespace Wpf;
+namespace WpfApp;
 
 public partial class UserControl2
 {
@@ -45,6 +45,11 @@ public partial class UserControl2
                 {
                     Title = "Select folder...",
                 };
+
+                if (!string.IsNullOrWhiteSpace(interaction.Input))
+                {
+                    folderDialog.InitialDirectory = interaction.Input;
+                }
 
                 interaction.SetOutput(folderDialog.ShowDialog() == true ? folderDialog.FolderName : null);
             });

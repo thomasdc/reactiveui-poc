@@ -1,5 +1,7 @@
-﻿using System.Reactive;
+﻿using System.IO;
+using System.Reactive;
 using System.Reactive.Linq;
+using System.Windows.Shapes;
 using ReactiveUI;
 
 namespace Wpf;
@@ -25,7 +27,7 @@ public class FoobarViewModel : ReactiveObject
     
     public ReactiveCommand<string, Unit> RunJob { get; }
 
-    public Interaction<Unit, string?> FolderSelection { get; }
+    public Interaction<string?, string?> FolderSelection { get; }
     
     public ReactiveCommand<Unit, Unit> BrowseFolder { get; }
 
@@ -50,7 +52,7 @@ public class FoobarViewModel : ReactiveObject
         RunJob = ReactiveCommand.CreateFromTask<string>(Run, canExecuteJob);
         
         // https://www.reactiveui.net/docs/handbook/interactions/
-        FolderSelection = new Interaction<Unit, string?>();
+        FolderSelection = new Interaction<string?, string?>();
         BrowseFolder = ReactiveCommand.CreateFromTask(OnBrowseFolder);
     }
 
@@ -64,7 +66,7 @@ public class FoobarViewModel : ReactiveObject
     private async Task OnBrowseFolder()
     {
         Console.WriteLine("Hello from OnBrowseFolder");
-        var folder = await FolderSelection.Handle(Unit.Default);
+        var folder = await FolderSelection.Handle(Directory.Exists(SomeText) ? SomeText : null);
         if (folder != null)
         {
             SomeText = folder;
