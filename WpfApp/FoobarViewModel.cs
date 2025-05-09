@@ -49,17 +49,17 @@ public class FoobarViewModel : ReactiveObject
             .ObserveOn(RxApp.MainThreadScheduler);
         canExecuteJob.DistinctUntilChanged()
             .Subscribe(allowed => Console.WriteLine("Can execute job: " + allowed));
-        RunJob = ReactiveCommand.CreateFromTask<string>(Run, canExecuteJob);
+        RunJob = ReactiveCommand.CreateRunInBackground<string>(Run, canExecuteJob);
         
         // https://www.reactiveui.net/docs/handbook/interactions/
         FolderSelection = new Interaction<string?, string?>();
         BrowseFolder = ReactiveCommand.CreateFromTask(OnBrowseFolder);
     }
 
-    private async Task Run(string timeAsString)
+    private void Run(string timeAsString)
     {
         Console.WriteLine($"Running!\t{timeAsString}");
-        await Task.Delay(3000);
+        Thread.Sleep(3000);
         Console.WriteLine($"Ended\t\t{timeAsString}");
     }
 
